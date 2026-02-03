@@ -52,6 +52,9 @@ If you still want to use GitHub Pages for a demo:
 
 1. Use it **only** for static documentation or UI mockups (no live polling).
 2. Export static HTML (e.g., for the README or a marketing page) and place it in a `/docs` folder or a separate branch (e.g., `gh-pages`).
-3. In the GitHub repo settings → **Pages**, select the `/docs` folder or the `gh-pages` branch as the source.
+3. Ensure `/docs` (or the `gh-pages` branch) contains an `index.html` file. GitHub Pages will only display `index.html` by default.
+4. In the GitHub repo settings → **Pages**, select the `/docs` folder or the `gh-pages` branch as the source.
+
+If your Pages site is only showing the README, it means you did not publish an `index.html`. Create a simple `docs/index.html` and re-deploy.
 
 For a real deployment of the Laravel app, use a PHP-capable host (Laravel Forge, Render, AWS, etc.) with MySQL.
