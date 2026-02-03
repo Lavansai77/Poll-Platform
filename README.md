@@ -44,3 +44,14 @@ This repository contains the Laravel app-level scaffold (controllers, models, mi
    git push -u origin <branch-name>
    ```
 
+## Deploy on GitHub Pages (limitations)
+
+GitHub Pages only hosts **static** sites (HTML/CSS/JS). A Laravel app requires a PHP runtime and a database, so it **cannot** run on GitHub Pages directly.
+
+If you still want to use GitHub Pages for a demo:
+
+1. Use it **only** for static documentation or UI mockups (no live polling).
+2. Export static HTML (e.g., for the README or a marketing page) and place it in a `/docs` folder or a separate branch (e.g., `gh-pages`).
+3. In the GitHub repo settings → **Pages**, select the `/docs` folder or the `gh-pages` branch as the source.
+
+For a real deployment of the Laravel app, use a PHP-capable host (Laravel Forge, Render, AWS, etc.) with MySQL.
